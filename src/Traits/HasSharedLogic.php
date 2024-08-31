@@ -136,6 +136,20 @@ trait HasSharedLogic
     }
 
     /**
+     * @throws \JsonException
+     */
+    public function buttonWithWebApp(string $text, array $web_app, int $columns = 2): self
+    {
+        $this->buttons[] = compact('text', 'web_app');
+
+        $this->keyboardMarkup([
+            'inline_keyboard' => array_chunk($this->buttons, $columns),
+        ]);
+
+        return $this;
+    }
+
+    /**
      * Send the message silently.
      * Users will receive a notification with no sound.
      *
