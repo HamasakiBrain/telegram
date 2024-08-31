@@ -1,5 +1,5 @@
 {
-    "name": "laravel-notification-channels/telegram",
+    "name": "hamasakibrain/telegram",
     "description": "Telegram Notifications Channel for Laravel",
     "license": "MIT",
     "keywords": [
